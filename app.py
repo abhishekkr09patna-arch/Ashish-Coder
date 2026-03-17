@@ -10,7 +10,7 @@ client = Groq(
     api_key=os.getenv("GROQ_API_KEY")
 )
 
-st.title("AI chatbot with Ashish coder")
+st.title("AI chatbot creater by Ashish coder")
 
 # Store chat history
 if "messages" not in st.session_state:
