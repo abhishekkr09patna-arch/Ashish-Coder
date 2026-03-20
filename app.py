@@ -5,7 +5,7 @@ from groq import Groq
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY"))
 
 # ── Page config ──────────────────────────────────────────────
 st.set_page_config(
