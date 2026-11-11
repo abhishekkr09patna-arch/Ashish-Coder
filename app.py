@@ -174,7 +174,7 @@ model_choice = st.selectbox(
         "openai/gpt-oss-120b",
     ],
 )
-    temperature = st.slider("🌡️ Creativity", 0.0, 1.0, 0.7, 0.05)
+temperature = st.slider("🌡️ Creativity", 0.0, 1.0, 0.7, 0.05)
 
     st.markdown("---")
     st.markdown("**💬 Chat Stats**")
