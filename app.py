@@ -115,10 +115,27 @@ st.markdown("""
         border: 1px solid rgba(255,255,255,0.2) !important;
         border-radius: 14px !important;
     }
-    .stChatInput textarea {
-        color: #ffffff !important;
-        font-size: 0.93rem !important;
-    }
+   /* Chat input box */
+.stChatInput textarea {
+    color: #111827 !important;
+    background-color: #ffffff !important;
+    caret-color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+    font-size: 16px !important;
+}
+
+/* Placeholder text */
+.stChatInput textarea::placeholder {
+    color: #6b7280 !important;
+    opacity: 1 !important;
+}
+
+/* Input box border */
+.stChatInput > div {
+    background-color: #ffffff !important;
+    border: 2px solid #6366f1 !important;
+    border-radius: 14px !important;
+}
     .stChatInput textarea::placeholder { color: rgba(255,255,255,0.4) !important; }
 
     /* Scrollbar */
@@ -150,12 +167,13 @@ with st.sidebar:
     st.markdown("## ⚙️ Settings")
     st.markdown("---")
 
-    model_choice = st.selectbox(
-        "🧠 Model",
-        ["llama-3.3-70b-versatile", "llama3-8b-8192", "mixtral-8x7b-32768"],
-        index=0
-    )
-
+model_choice = st.selectbox(
+    "🧠 Model",
+    [
+        "openai/gpt-oss-20b",
+        "openai/gpt-oss-120b",
+    ],
+)
     temperature = st.slider("🌡️ Creativity", 0.0, 1.0, 0.7, 0.05)
 
     st.markdown("---")
