@@ -167,14 +167,14 @@ with st.sidebar:
     st.markdown("## ⚙️ Settings")
     st.markdown("---")
 
-model_choice = st.selectbox(
+    model_choice = st.selectbox(
     "🧠 Model",
     [
         "openai/gpt-oss-20b",
         "openai/gpt-oss-120b",
     ],
 )
-temperature = st.slider("🌡️ Creativity", 0.0, 1.0, 0.7, 0.05)
+    temperature = st.slider("🌡️ Creativity", 0.0, 1.0, 0.7, 0.05)
 
     st.markdown("---")
     st.markdown("**💬 Chat Stats**")
